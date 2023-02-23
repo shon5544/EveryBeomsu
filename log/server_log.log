@@ -12300,3 +12300,18 @@ Caused by: java.sql.SQLException: Incorrect string value: '\xC5\xD7\xBD\xBA\xC6\
         next_val as id_val 
     from
         member_seq for update
+2023-02-24T04:17:11.604+09:00 DEBUG 4628 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    update
+        member_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-24T04:17:11.610+09:00 DEBUG 4628 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (login_id, login_pw, name, nickname, member_id) 
+    values
+        (?, ?, ?, ?, ?)
+2023-02-24T04:17:11.617+09:00  INFO 4628 --- [http-nio-8080-exec-6] b.e.controller.RegisterLoginController   : Success: registration is completed
