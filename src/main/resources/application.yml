@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: sbs32465169132184!
+    url: jdbc:mysql://localhost:3306/everybeom?useUnicode=true&serverTimezone=Asia/Seoul
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        default_batch_size: 100
+        format_sql: true
+
+  output:
+    ansi:
+      enabled: always
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.type: trace
