@@ -1,12 +1,13 @@
 package beomside.everybeomsu.domain;
 
-import beomside.everybeomsu.dto.BoardReqDto;
+import beomside.everybeomsu.dto.req.BoardReqDto;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -22,11 +23,11 @@ public class Board {
 
     //연관관계 매핑
     @OneToMany(mappedBy = "board")
-    private List<Post> posts;
+    private List<Post> posts = new ArrayList<>();
 
     //생성자
     public Board() {}
-    public Board(BoardReqDto dto) {
-        name = dto.getName();
+    public Board(String name) {
+        this.name = name;
     }
 }

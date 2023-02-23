@@ -1,17 +1,13 @@
 package beomside.everybeomsu.service;
 
 import beomside.everybeomsu.domain.Member;
-import beomside.everybeomsu.dto.MemberReqDto;
-import beomside.everybeomsu.repository.MemberRepository;
+import beomside.everybeomsu.dto.req.regist.MemberRegisterReqDto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.web.WebAppConfiguration;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -22,7 +18,7 @@ class MemberServiceTest {
     @Test
     public void 회원가입() {
         //given
-        MemberReqDto memberDto = new MemberReqDto();
+        MemberRegisterReqDto memberDto = new MemberRegisterReqDto();
         memberDto.setName("손범수");
         memberDto.setNickname("틈만나면케겔운동");
         memberDto.setLogin_id("sbs8239");
@@ -30,7 +26,7 @@ class MemberServiceTest {
 
         Member member = new Member(memberDto);
 
-        MemberReqDto memberDto2 = new MemberReqDto();
+        MemberRegisterReqDto memberDto2 = new MemberRegisterReqDto();
         memberDto2.setName("이나리");
         memberDto2.setNickname("100m매일걷기");
         memberDto2.setLogin_id("sbs8239");
@@ -39,11 +35,11 @@ class MemberServiceTest {
         Member member2 = new Member(memberDto2);
 
         //when
-        memberService.regist(member);
+        memberService.register(member);
 
         //then
         Assertions.assertThrows(IllegalStateException.class, () -> {
-            memberService.regist(member2);
+            memberService.register(member2);
         });
 
     }
@@ -51,18 +47,18 @@ class MemberServiceTest {
     @Test
     void login() {
         //given
-        MemberReqDto memberDto = new MemberReqDto();
+        MemberRegisterReqDto memberDto = new MemberRegisterReqDto();
         memberDto.setName("손범수");
         memberDto.setNickname("틈만나면케겔운동");
         memberDto.setLogin_id("sbs8239");
         memberDto.setLogin_pw("sbs32465169");
 
         Member member = new Member(memberDto);
-        memberService.regist(member);
+        memberService.register(member);
 
 
         //when
-        MemberReqDto memberDto2 = new MemberReqDto();
+        MemberRegisterReqDto memberDto2 = new MemberRegisterReqDto();
         memberDto2.setName("이나리");
         memberDto2.setNickname("100m매일걷기");
         memberDto2.setLogin_id("sbs8239");

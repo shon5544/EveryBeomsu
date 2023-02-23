@@ -20,6 +20,9 @@ spring:
     ansi:
       enabled: always
 
-logging.level:
-  org.hibernate.SQL: debug
-  org.hibernate.type: trace
+logging:
+  file:
+    name: ${user.dir}/log/server_log.log
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace

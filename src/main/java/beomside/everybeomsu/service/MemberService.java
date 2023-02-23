@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -17,7 +16,7 @@ public class MemberService {
 
     //회원 가입
     @Transactional
-    public void regist(Member member) {
+    public void register(Member member) {
         validationDuplicateMember(member);
         memberRepository.save(member);
     }
@@ -25,6 +24,11 @@ public class MemberService {
     //회원 로그인
     public void login(Member member) {
         validationLoginMember(member);
+    }
+
+    public Member search(Long id) {
+        Optional<Member> optionalMember = memberRepository.findById(id);
+        return optionalMember.orElseGet(Member::new);
     }
 
     //회원 중복 검사

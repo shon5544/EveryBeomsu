@@ -1,9 +1,10 @@
 package beomside.everybeomsu.domain;
 
-import beomside.everybeomsu.dto.MemberReqDto;
+import beomside.everybeomsu.dto.req.regist.MemberRegisterReqDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,14 +27,24 @@ public class Member {
 
     //연관관계 매핑
     @OneToMany(mappedBy = "member")
-    private List<Post> posts;
+    private List<Post> posts = new ArrayList<>();
 
     @OneToMany(mappedBy = "member")
-    private List<Comment> comments;
+    private List<Comment> comments = new ArrayList<>();
 
     //생성자
     public Member() {}
-    public Member(MemberReqDto dto) {
+
+    //테스트용 생성자
+    public Member(String name,String nickname, String loginId, String loginPw) {
+        this.name = name;
+        this.nickname = nickname;
+        this.loginId = loginId;
+        this.loginPw = loginPw;
+    }
+
+    //회원가입용 생성자
+    public Member(MemberRegisterReqDto dto) {
         name = dto.getName();
         nickname = dto.getNickname();
         loginId = dto.getLogin_id();

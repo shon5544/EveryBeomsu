@@ -1,4 +1,4 @@
-package beomside.everybeomsu.dto;
+package beomside.everybeomsu.dto.req;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
