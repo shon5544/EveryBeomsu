@@ -22,10 +22,17 @@ public class Post {
 
     private String content; // 게시글 내용
 
-    private Long scraps_cnt; // 스크랩 누적 수
-    private Long likes_cnt; // 좋아요 누적 수
-    private Long comments_cnt; // 댓글 누적 수
-    private Long photos_cnt; // 사진 누적 수
+    @Column(name = "scraps_cnt")
+    private Long scrapsCnt; // 스크랩 누적 수
+
+    @Column(name = "likes_cnt")
+    private Long likesCnt; // 좋아요 누적 수
+
+    @Column(name = "comments_cnt")
+    private Long commentsCnt; // 댓글 누적 수
+
+    @Column(name = "photos_cnt")
+    private Long photosCnt; // 사진 누적 수
 
     @Column(name = "posted_date")
     private LocalDateTime postedDate; // 포스팅 날짜
@@ -49,10 +56,10 @@ public class Post {
     @Builder
     public Post(String title,
                 String content,
-                Long scraps_cnt,
-                Long likes_cnt,
-                Long comments_cnt,
-                Long photos_cnt,
+                Long scrapsCnt,
+                Long likesCnt,
+                Long commentsCnt,
+                Long photosCnt,
                 boolean isAnonymous,
                 boolean isQuestion,
                 LocalDateTime postedDate,
@@ -60,10 +67,10 @@ public class Post {
                 Board board) {
         this.title = title;
         this.content = content;
-        this.scraps_cnt = scraps_cnt;
-        this.likes_cnt = likes_cnt;
-        this.comments_cnt = comments_cnt;
-        this.photos_cnt = photos_cnt;
+        this.scrapsCnt = scrapsCnt;
+        this.likesCnt = likesCnt;
+        this.commentsCnt = commentsCnt;
+        this.photosCnt = photosCnt;
         this.isAnonymous = isAnonymous;
         this.isQuestion = isQuestion;
         this.postedDate = postedDate;
@@ -73,34 +80,34 @@ public class Post {
 
     //비즈니스 로직
     public void plusScrap() {
-        scraps_cnt++;
+        scrapsCnt++;
     }
 
     public void plusLike() {
-        likes_cnt++;
+        likesCnt++;
     }
 
     public void plusComment() {
-        comments_cnt++;
+        commentsCnt++;
     }
 
     public void plusPhoto() {
-        photos_cnt++;
+        photosCnt++;
     }
 
     public void minusScrap() {
-        scraps_cnt--;
+        scrapsCnt--;
     }
 
     public void minusLike() {
-        likes_cnt--;
+        likesCnt--;
     }
 
     public void minusComment() {
-        comments_cnt--;
+        commentsCnt--;
     }
 
     public void minusPhoto() {
-        photos_cnt--;
+        photosCnt--;
     }
 }

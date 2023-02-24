@@ -40,7 +40,7 @@ public class HomeController {
 
         // boards 의 이름에 맞춰 Post 객체들을 4개씩 페이징하여 posts 로 넣는다. 
         boards.forEach(b -> {
-            posts.add(postService.getPostWithPaging(b.getName()));
+            posts.add(postService.getFourPost(b.getName()));
         });
 
         // idList 만들기
