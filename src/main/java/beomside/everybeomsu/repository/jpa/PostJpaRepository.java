@@ -16,7 +16,7 @@ public class PostJpaRepository {
     public List<Post> findPostByPaging(String boardName) {
         return em.createQuery(
                 "select p from Post p" +
-                        " join p.board on p.board.name = :boardName" +
+                        " join fetch p.board on p.board.name = :boardName" +
                         " order by p.postedDate desc", Post.class)
                 .setParameter("boardName", boardName)
                 .setFirstResult(0)

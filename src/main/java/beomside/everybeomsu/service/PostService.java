@@ -24,6 +24,11 @@ public class PostService {
         postRepository.save(post);
     }
 
+    public Post getPostById(Long id) {
+        return postRepository.findById(id)
+                .orElseThrow(() -> new IllegalStateException("해당하는 포스트가 없습니다."));
+    }
+
     public List<PostHomeResDto> getPostWithPaging(String boardName) {
         return postJpaRepository.findPostByPaging(boardName).stream()
                 .map(p -> new PostHomeResDto(p.getTitle(), p.getPostedDate(), p.getBoard().getName()))
