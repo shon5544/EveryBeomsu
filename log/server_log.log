@@ -14373,3 +14373,27 @@ org.hibernate.query.SemanticException: Could not resolve attribute 'borderId' of
         post p1_0 
     where
         p1_0.post_id=?
+2023-02-24T15:58:16.224+09:00 DEBUG 10484 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-24T15:58:16.254+09:00 DEBUG 10484 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.post_id,
+        c1_0.comment_id,
+        c1_0.comment_parent_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment c1_0 
+    where
+        c1_0.post_id=?
