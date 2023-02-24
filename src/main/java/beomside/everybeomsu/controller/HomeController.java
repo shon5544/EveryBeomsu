@@ -43,8 +43,6 @@ public class HomeController {
             posts.add(postService.getPostWithPaging(b.getName()));
         });
 
-        System.out.println(posts.toArray());
-
         // idList 만들기
         List<Long> idList = boardService.getAllId();
 
