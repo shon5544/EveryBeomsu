@@ -28,7 +28,7 @@ public class MemberService {
 
     public Member search(Long id) {
         Optional<Member> optionalMember = memberRepository.findById(id);
-        return optionalMember.orElseGet(Member::new);
+        return optionalMember.orElseThrow(() -> new IllegalStateException("해당하는 회원정보가 없습니다."));
     }
 
     //회원 중복 검사

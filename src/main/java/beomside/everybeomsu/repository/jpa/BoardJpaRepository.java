@@ -14,7 +14,7 @@ public class BoardJpaRepository {
 
     public List<Long> getIdList() {
         return em.createQuery(
-                "select b.board_id from Board b", Long.class)
+                "select b.boardId from Board b", Long.class)
                 .getResultList();
     }
 }

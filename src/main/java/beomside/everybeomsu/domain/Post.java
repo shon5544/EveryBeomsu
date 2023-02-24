@@ -1,21 +1,21 @@
 package beomside.everybeomsu.domain;
 
-import beomside.everybeomsu.dto.req.write.PostWriteReqDto;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Getter @Setter
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Post {
 
     //id
     @Id @GeneratedValue
-    private Long post_id;
+    @Column(name = "post_id")
+    private Long postId;
 
     //기본 필드
     private String title; // 게시글 제목
@@ -46,31 +46,30 @@ public class Post {
     private List<Comment> comments = new ArrayList<>();
 
     //생성자
-    public Post() {}
-    public Post(PostWriteReqDto dto) {
-        title = dto.getTitle();
-        content = dto.getContent();
-        scraps_cnt = 0L;
-        likes_cnt = 0L;
-        comments_cnt = 0L;
-        photos_cnt = 0L;
-        isAnonymous = dto.isAnonymous();
-        isQuestion = dto.isQuestion();
-        postedDate = dto.getPostedDate();
+    @Builder
+    public Post(String title,
+                String content,
+                Long scraps_cnt,
+                Long likes_cnt,
+                Long comments_cnt,
+                Long photos_cnt,
+                boolean isAnonymous,
+                boolean isQuestion,
+                LocalDateTime postedDate,
+                Member member,
+                Board board) {
+        this.title = title;
+        this.content = content;
+        this.scraps_cnt = scraps_cnt;
+        this.likes_cnt = likes_cnt;
+        this.comments_cnt = comments_cnt;
+        this.photos_cnt = photos_cnt;
+        this.isAnonymous = isAnonymous;
+        this.isQuestion = isQuestion;
+        this.postedDate = postedDate;
+        this.member = member;
+        this.board = board;
     }
-
-    // 추가 예정
-//    public Post(PostResDto dto){
-//        title = dto.getTitle();
-//        content = dto.getContent();
-//        scraps_cnt = dto.getScraps_cnt();
-//        likes_cnt = dto.getLikes_cnt();
-//        comments_cnt = dto.getComments_cnt();
-//        photos_cnt = dto.getPhotos_cnt();
-//        isAnonymous = dto.isAnonymous();
-//        isQuestion = dto.isQuestion();
-//        postedDate = dto.getPosted_date();
-//    }
 
     //비즈니스 로직
     public void plusScrap() {

@@ -18,7 +18,9 @@ public class BoardController {
 
     @PostMapping("/createBoard/{boardName}")
     public void createBoard(@PathVariable("boardName") String boardName) {
-        Board board = new Board(boardName);
+        Board board = Board.builder()
+                .name(boardName)
+                .build();
 
         boardService.createBoard(board);
     }

@@ -1,22 +1,24 @@
 package beomside.everybeomsu.domain;
 
 import beomside.everybeomsu.dto.req.BoardReqDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Board {
 
     //id
     @Id @GeneratedValue
-    private Long board_id;
+    @Column(name = "board_id")
+    private Long boardId;
 
     //기본 필드
     private String name;
@@ -26,7 +28,7 @@ public class Board {
     private List<Post> posts = new ArrayList<>();
 
     //생성자
-    public Board() {}
+    @Builder
     public Board(String name) {
         this.name = name;
     }

@@ -7,6 +7,6 @@ import lombok.Data;
 public class MemberRegisterReqDto {
     @NotEmpty private String name;
     @NotEmpty private String nickname;
-    @NotEmpty private String login_id;
-    @NotEmpty private String login_pw;
+    @NotEmpty private String loginId;
+    @NotEmpty private String loginPw;
 }

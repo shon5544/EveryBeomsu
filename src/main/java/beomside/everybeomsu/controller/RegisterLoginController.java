@@ -19,7 +19,12 @@ public class RegisterLoginController {
 
     @PostMapping("/register")
     public void register(@RequestBody @Valid MemberRegisterReqDto memberRegisterReqDto) {
-        Member member = new Member(memberRegisterReqDto);
+        Member member = Member.builder()
+                .name(memberRegisterReqDto.getName())
+                .nickname(memberRegisterReqDto.getNickname())
+                .loginId(memberRegisterReqDto.getLoginId())
+                .loginPw(memberRegisterReqDto.getLoginPw())
+                .build();
 
         memberService.register(member);
         log.info("Success: registration is completed");

@@ -46,7 +46,11 @@ public class HomeController {
         // idList 만들기
         List<Long> idList = boardService.getAllId();
 
-        HomeResDto result = new HomeResDto(memberDto, posts, boards, idList);
-        return result;
+        return HomeResDto.builder()
+                .member(memberDto)
+                .posts(posts)
+                .boards(boards)
+                .idList(idList)
+                .build();
     }
 }

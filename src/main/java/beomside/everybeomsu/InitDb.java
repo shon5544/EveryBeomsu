@@ -30,9 +30,18 @@ public class InitDb {
         private final EntityManager em;
 
         public void init() {
-            Member member = new Member("손범수", "shon5544", "sbs8239", "sbs32465169");
-            Board free = new Board("free");
-            Board neww = new Board("new");
+            Member member = Member.builder()
+                    .name("손범수")
+                    .nickname("shon5544")
+                    .loginId("sbs8239")
+                    .loginPw("sbs32465169")
+                    .build();
+            Board free = Board.builder()
+                    .name("free")
+                    .build();
+            Board neww = Board.builder()
+                    .name("new")
+                    .build();
 
             PostWriteReqDto postWriteReqDto = new PostWriteReqDto();
             postWriteReqDto.setTitle("테스트 제목: 자유");
@@ -90,37 +99,117 @@ public class InitDb {
             postWriteReqDto8.setQuestion(false);
             postWriteReqDto8.setPostedDate(LocalDateTime.now());
 
-            Post post1 = new Post(postWriteReqDto);
-            post1.setMember(member);
-            post1.setBoard(free);
+            Post post1 = Post.builder()
+                    .title(postWriteReqDto.getTitle())
+                    .content(postWriteReqDto.getContent())
+                    .scraps_cnt(0L)
+                    .likes_cnt(0L)
+                    .comments_cnt(0L)
+                    .photos_cnt(0L)
+                    .postedDate(postWriteReqDto.getPostedDate())
+                    .isAnonymous(postWriteReqDto.isAnonymous())
+                    .isQuestion(postWriteReqDto.isQuestion())
+                    .member(member)
+                    .board(free)
+                    .build();
 
-            Post post2 = new Post(postWriteReqDto2);
-            post2.setMember(member);
-            post2.setBoard(free);
+            Post post2 = Post.builder()
+                    .title(postWriteReqDto2.getTitle())
+                    .content(postWriteReqDto2.getContent())
+                    .scraps_cnt(0L)
+                    .likes_cnt(0L)
+                    .comments_cnt(0L)
+                    .photos_cnt(0L)
+                    .postedDate(postWriteReqDto2.getPostedDate())
+                    .isAnonymous(postWriteReqDto2.isAnonymous())
+                    .isQuestion(postWriteReqDto2.isQuestion())
+                    .member(member)
+                    .board(free)
+                    .build();
 
-            Post post3 = new Post(postWriteReqDto3);
-            post3.setMember(member);
-            post3.setBoard(free);
+            Post post3 = Post.builder()
+                    .title(postWriteReqDto3.getTitle())
+                    .content(postWriteReqDto3.getContent())
+                    .scraps_cnt(0L)
+                    .likes_cnt(0L)
+                    .comments_cnt(0L)
+                    .photos_cnt(0L)
+                    .postedDate(postWriteReqDto3.getPostedDate())
+                    .isAnonymous(postWriteReqDto3.isAnonymous())
+                    .isQuestion(postWriteReqDto3.isQuestion())
+                    .member(member)
+                    .board(free)
+                    .build();
 
-            Post post4 = new Post(postWriteReqDto4);
-            post4.setMember(member);
-            post4.setBoard(free);
+            Post post4 = Post.builder()
+                    .title(postWriteReqDto4.getTitle())
+                    .content(postWriteReqDto4.getContent())
+                    .scraps_cnt(0L)
+                    .likes_cnt(0L)
+                    .comments_cnt(0L)
+                    .photos_cnt(0L)
+                    .postedDate(postWriteReqDto4.getPostedDate())
+                    .isAnonymous(postWriteReqDto4.isAnonymous())
+                    .isQuestion(postWriteReqDto4.isQuestion())
+                    .member(member)
+                    .board(free)
+                    .build();
 
-            Post post5 = new Post(postWriteReqDto5);
-            post5.setMember(member);
-            post5.setBoard(neww);
+            Post post5 = Post.builder()
+                    .title(postWriteReqDto5.getTitle())
+                    .content(postWriteReqDto5.getContent())
+                    .scraps_cnt(0L)
+                    .likes_cnt(0L)
+                    .comments_cnt(0L)
+                    .photos_cnt(0L)
+                    .postedDate(postWriteReqDto5.getPostedDate())
+                    .isAnonymous(postWriteReqDto5.isAnonymous())
+                    .isQuestion(postWriteReqDto5.isQuestion())
+                    .member(member)
+                    .board(neww)
+                    .build();
 
-            Post post6 = new Post(postWriteReqDto6);
-            post6.setMember(member);
-            post6.setBoard(neww);
+            Post post6 = Post.builder()
+                    .title(postWriteReqDto6.getTitle())
+                    .content(postWriteReqDto6.getContent())
+                    .scraps_cnt(0L)
+                    .likes_cnt(0L)
+                    .comments_cnt(0L)
+                    .photos_cnt(0L)
+                    .postedDate(postWriteReqDto6.getPostedDate())
+                    .isAnonymous(postWriteReqDto6.isAnonymous())
+                    .isQuestion(postWriteReqDto6.isQuestion())
+                    .member(member)
+                    .board(neww)
+                    .build();
 
-            Post post7 = new Post(postWriteReqDto7);
-            post7.setMember(member);
-            post7.setBoard(neww);
+            Post post7 = Post.builder()
+                    .title(postWriteReqDto7.getTitle())
+                    .content(postWriteReqDto7.getContent())
+                    .scraps_cnt(0L)
+                    .likes_cnt(0L)
+                    .comments_cnt(0L)
+                    .photos_cnt(0L)
+                    .postedDate(postWriteReqDto7.getPostedDate())
+                    .isAnonymous(postWriteReqDto7.isAnonymous())
+                    .isQuestion(postWriteReqDto7.isQuestion())
+                    .member(member)
+                    .board(neww)
+                    .build();
 
-            Post post8 = new Post(postWriteReqDto8);
-            post8.setMember(member);
-            post8.setBoard(neww);
+            Post post8 = Post.builder()
+                    .title(postWriteReqDto8.getTitle())
+                    .content(postWriteReqDto8.getContent())
+                    .scraps_cnt(0L)
+                    .likes_cnt(0L)
+                    .comments_cnt(0L)
+                    .photos_cnt(0L)
+                    .postedDate(postWriteReqDto8.getPostedDate())
+                    .isAnonymous(postWriteReqDto8.isAnonymous())
+                    .isQuestion(postWriteReqDto8.isQuestion())
+                    .member(member)
+                    .board(neww)
+                    .build();
 
             em.persist(member);
             em.persist(free);
