@@ -21,7 +21,7 @@ public class PostService {
     private final PostJpaRepository postJpaRepository;
 
     @Transactional
-    public void writePost(Post post) {
+    public void createPost(Post post) {
         postRepository.save(post);
     }
 

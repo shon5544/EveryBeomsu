@@ -1,5 +1,7 @@
 package beomside.everybeomsu.dto.req.post;
 
+import beomside.everybeomsu.domain.Board;
+import beomside.everybeomsu.domain.Member;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -25,4 +27,7 @@ public class PostReqDto {
 //    private BoardPostReqDto board;
     @NotNull private boolean isAnonymous; // 익명 글 여부
     @NotNull private boolean isQuestion; // 질문 글 여부
+
+    private Member member;
+    private Board board;
 }

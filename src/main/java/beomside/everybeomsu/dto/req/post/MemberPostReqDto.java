@@ -9,5 +9,4 @@ public class MemberPostReqDto {
     private String nickname;
     private String loginId;
     private String loginPw;
-
 }

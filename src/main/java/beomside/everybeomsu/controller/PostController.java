@@ -1,13 +1,12 @@
 package beomside.everybeomsu.controller;
 
 import beomside.everybeomsu.domain.Post;
+import beomside.everybeomsu.dto.req.post.PostReqDto;
 import beomside.everybeomsu.dto.res.post.CommentPostResDto;
 import beomside.everybeomsu.dto.res.post.PostResDto;
 import beomside.everybeomsu.service.PostService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.stream.Collectors;
 
@@ -38,5 +37,24 @@ public class PostController {
                 .build();
 
         return postResDto;
+    }
+
+    @PostMapping("/createPost")
+    public void createPost(@RequestBody PostReqDto postReqDto) {
+        Post post = Post.builder()
+                .title(postReqDto.getTitle())
+                .content(postReqDto.getContent())
+                .scrapsCnt(0L)
+                .likesCnt(0L)
+                .commentsCnt(0L)
+                .photosCnt(0L)
+                .postedDate(postReqDto.getPostedDate())
+                .isAnonymous(postReqDto.isAnonymous())
+                .isQuestion(postReqDto.isQuestion())
+                .member(postReqDto.getMember())
+                .board(postReqDto.getBoard())
+                .build();
+
+        postService.createPost(post);
     }
 }
