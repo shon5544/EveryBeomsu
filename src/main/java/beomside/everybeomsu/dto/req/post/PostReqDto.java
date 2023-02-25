@@ -1,6 +1,5 @@
-package beomside.everybeomsu.dto.req.write;
+package beomside.everybeomsu.dto.req.post;
 
-import jakarta.persistence.Lob;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -8,7 +7,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class PostWriteReqDto {
+public class PostReqDto {
     //일반 필드
     @NotEmpty private String title; // 게시글 제목
 
@@ -22,8 +21,8 @@ public class PostWriteReqDto {
 
     @NotNull private LocalDateTime postedDate; // 포스팅 날짜
 
-//    private MemberWriteReqDto member;
-//    private BoardWriteReqDto board;
+//    private MemberPostReqDto member;
+//    private BoardPostReqDto board;
     @NotNull private boolean isAnonymous; // 익명 글 여부
     @NotNull private boolean isQuestion; // 질문 글 여부
 }
