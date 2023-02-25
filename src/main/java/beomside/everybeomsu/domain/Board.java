@@ -24,7 +24,7 @@ public class Board {
     private String name;
 
     //연관관계 매핑
-    @OneToMany(mappedBy = "board")
+    @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
     private List<Post> posts = new ArrayList<>();
 
     //생성자

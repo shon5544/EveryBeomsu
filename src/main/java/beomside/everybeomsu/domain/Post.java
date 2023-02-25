@@ -49,7 +49,7 @@ public class Post {
     @JoinColumn(name = "board_id")
     private Board board;
 
-    @OneToMany(mappedBy = "post")
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     private List<Comment> comments = new ArrayList<>();
 
     //생성자

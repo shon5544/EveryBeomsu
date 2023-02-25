@@ -18289,3 +18289,29 @@ java.lang.StringIndexOutOfBoundsException: begin 0, end 50, length 16
 2023-02-24T17:39:50.879+09:00  INFO 11456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2023-02-24T17:39:50.920+09:00  INFO 11456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2023-02-24T17:39:50.930+09:00  INFO 11456 --- [restartedMain] b.everybeomsu.EverybeomsuApplication     : Started EverybeomsuApplication in 6.098 seconds (process running for 6.605)
+2023-02-24T17:39:58.667+09:00  INFO 11456 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-24T17:39:58.667+09:00  INFO 11456 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-24T17:39:58.669+09:00  INFO 11456 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-24T17:39:59.145+09:00 DEBUG 11456 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    join
+        board b1_0 
+            on b1_0.board_id=p1_0.board_id 
+            and b1_0.name=? 
+    order by
+        p1_0.posted_date desc limit ?,
+        ?

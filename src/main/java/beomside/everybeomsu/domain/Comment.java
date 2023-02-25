@@ -64,4 +64,8 @@ public class Comment {
     public void plusLike() {
         likes_cnt++;
     }
+    public void deleteThis() {
+        this.content = "삭제된 댓글입니다.";
+        this.likes_cnt = 0L;
+    }
 }

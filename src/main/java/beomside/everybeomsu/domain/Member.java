@@ -31,15 +31,13 @@ public class Member {
     private String loginPw;
 
     //연관관계 매핑
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<Post> posts = new ArrayList<>();
 
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<Comment> comments = new ArrayList<>();
 
     //생성자
-
-    //테스트용 생성자
     @Builder
     public Member(String name,String nickname, String loginId, String loginPw) {
         this.name = name;
