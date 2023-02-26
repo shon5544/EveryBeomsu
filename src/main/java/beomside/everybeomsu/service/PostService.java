@@ -6,6 +6,7 @@ import beomside.everybeomsu.dto.res.home.PostHomeResDto;
 import beomside.everybeomsu.repository.PostRepository;
 import beomside.everybeomsu.repository.jpa.PostJpaRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
 public class PostService {
@@ -23,6 +25,7 @@ public class PostService {
     @Transactional
     public void createPost(Post post) {
         postRepository.save(post);
+        log.info("Success: the post is created successfully");
     }
 
     public Post getPostById(Long id) {
