@@ -1186,3 +1186,8 @@
     order by
         p1_0.posted_date desc limit ?,
         ?
+2023-02-26T18:42:29.095+09:00 DEBUG 7468 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        b1_0.board_id 
+    from
+        board b1_0

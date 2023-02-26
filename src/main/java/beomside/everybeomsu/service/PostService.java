@@ -5,6 +5,7 @@ import beomside.everybeomsu.dto.res.board.PostBoardResDto;
 import beomside.everybeomsu.dto.res.home.PostHomeResDto;
 import beomside.everybeomsu.repository.PostRepository;
 import beomside.everybeomsu.repository.jpa.PostJpaRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -28,7 +29,7 @@ public class PostService {
 
     public Post getPostById(Long id) {
         return postRepository.findById(id)
-                .orElseThrow(() -> new IllegalStateException("해당하는 포스트가 없습니다."));
+                .orElseThrow(() -> new EntityNotFoundException("해당하는 포스트가 없습니다."));
     }
 
     public List<PostHomeResDto> getFourPost(String boardName) {

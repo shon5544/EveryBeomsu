@@ -2,6 +2,7 @@ package beomside.everybeomsu.service;
 
 import beomside.everybeomsu.domain.Member;
 import beomside.everybeomsu.repository.MemberRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -54,7 +55,7 @@ public class MemberService {
         Optional<Member> findMember = Optional.ofNullable(byLogin_idAndLogin_pw);
 
         if(findMember.isEmpty()) {
-            throw new IllegalArgumentException("해당하는 회원이 없습니다.");
+            throw new EntityNotFoundException("해당하는 회원이 없습니다.");
         }
     }
 }
