@@ -1,12 +1,8 @@
 package beomside.everybeomsu.dto.req.post;
 
-import beomside.everybeomsu.domain.Board;
-import beomside.everybeomsu.domain.Member;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
-import java.time.LocalDateTime;
 
 @Data
 public class PostReqDto {
@@ -26,9 +22,9 @@ public class PostReqDto {
 
 //    private MemberPostReqDto member;
 //    private BoardPostReqDto board;
-    @NotNull private boolean isAnonymous; // 익명 글 여부
-    @NotNull private boolean isQuestion; // 질문 글 여부
+    @NotNull private boolean is_anonymous; // 익명 글 여부
+    @NotNull private boolean is_question; // 질문 글 여부
 
-    private Member member;
-    private Board board;
+    private Long member_id;
+    private Long board_id;
 }

@@ -4,6 +4,7 @@ import beomside.everybeomsu.domain.Board;
 import beomside.everybeomsu.dto.res.home.BoardHomeResDto;
 import beomside.everybeomsu.repository.BoardRepository;
 import beomside.everybeomsu.repository.jpa.BoardJpaRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +30,9 @@ public class BoardService {
 
     public List<Long> getAllId() {
         return boardJpaRepository.getIdList();
+    }
+
+    public Board getBoardById(Long boardId) {
+        return boardRepository.findById(boardId).orElseThrow(() -> new EntityNotFoundException("해당 id의 게시판이 없습니다."));
     }
 }

@@ -1,11 +1,16 @@
 package beomside.everybeomsu.controller;
 
+import beomside.everybeomsu.domain.Board;
+import beomside.everybeomsu.domain.Member;
 import beomside.everybeomsu.domain.Post;
 import beomside.everybeomsu.dto.req.post.PostReqDto;
 import beomside.everybeomsu.dto.res.post.CommentPostResDto;
 import beomside.everybeomsu.dto.res.post.PostResDto;
+import beomside.everybeomsu.service.BoardService;
+import beomside.everybeomsu.service.MemberService;
 import beomside.everybeomsu.service.PostService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -13,9 +18,12 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
+@Slf4j
 public class PostController {
 
     private final PostService postService;
+    private final MemberService memberService;
+    private final BoardService boardService;
 
     @GetMapping("/post/{postId}")
     public PostResDto getPost(@PathVariable("postId") Long postId) {
@@ -42,6 +50,9 @@ public class PostController {
 
     @PostMapping("/createPost")
     public void createPost(@RequestBody PostReqDto postReqDto) {
+        Member member = memberService.getMember(postReqDto.getMember_id());
+        Board board = boardService.getBoardById(postReqDto.getBoard_id());
+
         Post post = Post.builder()
                 .title(postReqDto.getTitle())
                 .content(postReqDto.getContent())
@@ -50,12 +61,14 @@ public class PostController {
                 .commentsCnt(0L)
                 .photosCnt(0L)
                 .postedDate(LocalDateTime.now())
-                .isAnonymous(postReqDto.isAnonymous())
-                .isQuestion(postReqDto.isQuestion())
-                .member(postReqDto.getMember())
-                .board(postReqDto.getBoard())
+                .isAnonymous(postReqDto.is_anonymous())
+                .isQuestion(postReqDto.is_question())
+                .member(member)
+                .board(board)
                 .build();
 
         postService.createPost(post);
+
+        log.info("Success: the post is created successfully");
     }
 }
