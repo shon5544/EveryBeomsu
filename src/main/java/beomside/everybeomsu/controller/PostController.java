@@ -8,6 +8,7 @@ import beomside.everybeomsu.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
 @RestController
@@ -48,7 +49,7 @@ public class PostController {
                 .likesCnt(0L)
                 .commentsCnt(0L)
                 .photosCnt(0L)
-                .postedDate(postReqDto.getPostedDate())
+                .postedDate(LocalDateTime.now())
                 .isAnonymous(postReqDto.isAnonymous())
                 .isQuestion(postReqDto.isQuestion())
                 .member(postReqDto.getMember())

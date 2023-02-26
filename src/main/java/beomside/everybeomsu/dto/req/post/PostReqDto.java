@@ -21,7 +21,8 @@ public class PostReqDto {
 //    private Long comments_cnt; // 댓글 누적 수
 //    private Long photos_cnt; // 사진 누적 수
 
-    @NotNull private LocalDateTime postedDate; // 포스팅 날짜
+    // posted_date 는 서버에서 처리하도록 하자.
+    //@NotNull private LocalDateTime postedDate; // 포스팅 날짜
 
 //    private MemberPostReqDto member;
 //    private BoardPostReqDto board;
