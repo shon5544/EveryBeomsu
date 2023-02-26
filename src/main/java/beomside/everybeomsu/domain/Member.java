@@ -45,4 +45,12 @@ public class Member {
         this.loginId = loginId;
         this.loginPw = loginPw;
     }
+
+    //비즈니스 로직
+    public void addPost(Post post) {
+        posts.add(post);
+    }
+    public void addComment(Comment comment) {
+        comments.add(comment);
+    }
 }

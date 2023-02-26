@@ -50,7 +50,7 @@ public class Post {
     private Board board;
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
-    private List<Comment> comments = new ArrayList<>();
+    private final List<Comment> comments = new ArrayList<>();
 
     //생성자
     @Builder
@@ -74,11 +74,20 @@ public class Post {
         this.isAnonymous = isAnonymous;
         this.isQuestion = isQuestion;
         this.postedDate = postedDate;
+
         this.member = member;
+        member.addPost(this);
+
         this.board = board;
+        board.addPost(this);
     }
 
     //비즈니스 로직
+    public void addComment(Comment comment) {
+        plusComment();
+        comments.add(comment);
+    }
+
     public void plusScrap() {
         scrapsCnt++;
     }

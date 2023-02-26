@@ -3,8 +3,9 @@ package beomside.everybeomsu.controller;
 import beomside.everybeomsu.domain.Board;
 import beomside.everybeomsu.domain.Member;
 import beomside.everybeomsu.domain.Post;
-import beomside.everybeomsu.dto.req.post.PostReqDto;
+import beomside.everybeomsu.dto.req.createPost.PostReqDto;
 import beomside.everybeomsu.dto.res.post.CommentPostResDto;
+import beomside.everybeomsu.dto.res.post.MemberPostResDto;
 import beomside.everybeomsu.dto.res.post.PostResDto;
 import beomside.everybeomsu.service.BoardService;
 import beomside.everybeomsu.service.MemberService;
@@ -38,9 +39,17 @@ public class PostController {
                 .postedDate(post.getPostedDate())
                 .isAnonymous(post.isAnonymous())
                 .isQuestion(post.isQuestion())
+                //나중에 refactoring.
                 .comments(
                         post.getComments().stream()
-                                .map(p -> CommentPostResDto.builder().build())
+                                .map(c -> CommentPostResDto.builder()
+                                        .content(c.getContent())
+                                        .likes_cnt(c.getLikes_cnt())
+                                        .commented_date(c.getCommentedDate())
+                                        .memberPostResDto(MemberPostResDto.builder()
+                                                .nickname(c.getMember().getNickname())
+                                                .build())
+                                        .build())
                                 .collect(Collectors.toList())
                 )
                 .build();
@@ -50,7 +59,7 @@ public class PostController {
 
     @PostMapping("/createPost")
     public void createPost(@RequestBody PostReqDto postReqDto) {
-        Member member = memberService.getMember(postReqDto.getMember_id());
+        Member member = memberService.getMemberById(postReqDto.getMember_id());
         Board board = boardService.getBoardById(postReqDto.getBoard_id());
 
         Post post = Post.builder()

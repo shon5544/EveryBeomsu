@@ -32,4 +32,9 @@ public class Board {
     public Board(String name) {
         this.name = name;
     }
+
+    //비즈니스 로직
+    public void addPost(Post post) {
+        posts.add(post);
+    }
 }

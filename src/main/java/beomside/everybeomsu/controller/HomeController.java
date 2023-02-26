@@ -28,7 +28,7 @@ public class HomeController {
     @GetMapping("/home/{id}")
     public HomeResDto getHomeData(@PathVariable("id") @Valid Long id) {
         // MemberHomeResDto 제작
-        Member findMember = memberService.getMember(id);
+        Member findMember = memberService.getMemberById(id);
         MemberHomeResDto memberDto = new MemberHomeResDto(
                 findMember.getNickname(),
                 findMember.getName(),

@@ -1,4 +1,4 @@
-package beomside.everybeomsu.dto.req;
+package beomside.everybeomsu.dto.req.createComment;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -8,7 +8,8 @@ import java.time.LocalDateTime;
 
 @Data
 public class CommentReqDto {
-    @NotEmpty private String content;
-    @NotNull private LocalDateTime commented_date;
-    private Long likes_cnt;
+    private String content;
+    private Long member_id;
+    private Long post_id;
+    private Long parent_id;
 }

@@ -27,7 +27,7 @@ public class MemberService {
         validationLoginMember(member);
     }
 
-    public Member getMember(Long id) {
+    public Member getMemberById(Long id) {
         Optional<Member> optionalMember = memberRepository.findById(id);
         return optionalMember.orElseThrow(() -> new IllegalStateException("해당하는 회원정보가 없습니다."));
     }

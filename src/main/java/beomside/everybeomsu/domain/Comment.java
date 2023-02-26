@@ -1,6 +1,5 @@
 package beomside.everybeomsu.domain;
 
-import beomside.everybeomsu.dto.req.CommentReqDto;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -55,9 +54,17 @@ public class Comment {
         this.content = content;
         this.likes_cnt = likes_cnt;
         this.commentedDate = commentedDate;
+
         this.member = member;
+        member.addComment(this);
+
         this.post = post;
-        this.commentParent = comment_parent;
+        post.addComment(this);
+
+        if(comment_parent != null){
+            this.commentParent = comment_parent;
+            comment_parent.addChild(this);
+        }
     }
 
     //비즈니스 로직
@@ -67,5 +74,9 @@ public class Comment {
     public void deleteThis() {
         this.content = "삭제된 댓글입니다.";
         this.likes_cnt = 0L;
+    }
+
+    public void addChild(Comment childComment) {
+        commentChild.add(childComment);
     }
 }

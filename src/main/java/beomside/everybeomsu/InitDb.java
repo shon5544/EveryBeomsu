@@ -3,7 +3,7 @@ package beomside.everybeomsu;
 import beomside.everybeomsu.domain.Board;
 import beomside.everybeomsu.domain.Member;
 import beomside.everybeomsu.domain.Post;
-import beomside.everybeomsu.dto.req.post.PostReqDto;
+import beomside.everybeomsu.dto.req.createPost.PostReqDto;
 import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
