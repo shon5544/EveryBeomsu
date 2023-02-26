@@ -35,7 +35,10 @@ public class Member {
     private List<Post> posts = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-    private List<Comment> comments = new ArrayList<>();
+    private final List<Comment> comments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
+    private final List<CommentReply> commentReplies = new ArrayList<>();
 
     //생성자
     @Builder
@@ -52,5 +55,8 @@ public class Member {
     }
     public void addComment(Comment comment) {
         comments.add(comment);
+    }
+    public void addCommentReply(CommentReply commentReply) {
+        commentReplies.add(commentReply);
     }
 }

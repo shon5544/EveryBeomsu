@@ -39,7 +39,7 @@ public class PostController {
                 .postedDate(post.getPostedDate())
                 .isAnonymous(post.isAnonymous())
                 .isQuestion(post.isQuestion())
-                //나중에 refactoring.
+                //나중에 리팩토링. 코드가 너무 복잡
                 .comments(
                         post.getComments().stream()
                                 .map(c -> CommentPostResDto.builder()
@@ -48,8 +48,24 @@ public class PostController {
                                         .commented_date(c.getCommentedDate())
                                         .memberPostResDto(MemberPostResDto.builder()
                                                 .nickname(c.getMember().getNickname())
-                                                .build())
-                                        .build())
+                                                .build()
+                                        )
+                                        .commentPostResDtos(
+                                                c.getCommentChild().stream()
+                                                        .map(innerC -> CommentPostResDto.builder()
+                                                                .content(innerC.getContent())
+                                                                .likes_cnt(innerC.getLikes_cnt())
+                                                                .commented_date(innerC.getCommentedDate())
+                                                                .memberPostResDto(MemberPostResDto.builder()
+                                                                        .nickname(innerC.getMember().getNickname())
+                                                                        .build()
+                                                                )
+                                                                .build()
+                                                        )
+                                                        .collect(Collectors.toList())
+                                        )
+                                        .build()
+                                )
                                 .collect(Collectors.toList())
                 )
                 .build();

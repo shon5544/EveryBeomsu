@@ -13,10 +13,11 @@ import java.util.List;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Comment {
+public class CommentReply {
 
     //id
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     @Column(name = "comment_id")
     private Long commentId;
 
@@ -36,25 +37,29 @@ public class Comment {
     @JoinColumn(name = "post_id")
     private Post post;
 
-    @OneToMany(mappedBy = "commentParent")
-    private final List<CommentReply> commentChild = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "comment_parent_id")
+    private Comment commentParent;
 
     //생성자
     @Builder
-    public Comment(String content,
+    public CommentReply(String content,
                    Long likes_cnt,
                    LocalDateTime commentedDate,
                    Member member,
-                   Post post) {
+                   Post post,
+                   Comment comment_parent) {
         this.content = content;
         this.likes_cnt = likes_cnt;
         this.commentedDate = commentedDate;
 
         this.member = member;
-        member.addComment(this);
+        member.addCommentReply(this);
 
         this.post = post;
-        post.addComment(this);
+
+        this.commentParent = comment_parent;
+        comment_parent.addChild(this);
     }
 
     //비즈니스 로직
@@ -64,9 +69,5 @@ public class Comment {
     public void deleteThis() {
         this.content = "삭제된 댓글입니다.";
         this.likes_cnt = 0L;
-    }
-
-    public void addChild(CommentReply childComment) {
-        commentChild.add(childComment);
     }
 }
