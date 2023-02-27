@@ -68,11 +68,13 @@ public class CommentController {
     public void plusCommentLikes(@PathVariable(name = "commentId") Long commentId) {
         Comment comment = commentService.getCommentById(commentId);
         commentService.plusCommentLikes(comment);
+        log.info("Success: plus likes for comment is completed successfully");
     }
 
     @PutMapping("/cancel/c/{commentId}/likes")
     public void cancelCommentLikes(@PathVariable(name = "commentId") Long commentId) {
         Comment comment = commentService.getCommentById(commentId);
         commentService.cancelCommentLikes(comment);
+        log.info("Success: cancel likes for comment is completed successfully");
     }
 }
