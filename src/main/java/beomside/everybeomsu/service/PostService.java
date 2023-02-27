@@ -32,6 +32,11 @@ public class PostService {
         post.plusLike();
     }
 
+    @Transactional
+    public void plusScraps(Post post) {
+        post.plusScrap();
+    }
+
     public Post getPostById(Long id) {
         return postRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("해당하는 포스트가 없습니다."));

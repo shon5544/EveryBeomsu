@@ -48,7 +48,7 @@ public class CommentController {
     @PostMapping("/createComment/reply")
     public void createCommentReply(@RequestBody CommentReplyReqDto commentReplyReqDto) {
         Member member = memberService.getMemberById(commentReplyReqDto.getMember_id());
-        Post post = postService.getPostById(commentReplyReqDto.getPost_id());
+//        Post post = postService.getPostById(commentReplyReqDto.getPost_id());
 
         Comment parent = commentReplyReqDto.getParent_id() != null ?
                 commentService.getCommentById(commentReplyReqDto.getParent_id()) :
@@ -59,7 +59,6 @@ public class CommentController {
                 .likes_cnt(0L)
                 .commentedDate(LocalDateTime.now())
                 .member(member)
-                .post(post)
                 .comment_parent(parent)
                 .build();
 

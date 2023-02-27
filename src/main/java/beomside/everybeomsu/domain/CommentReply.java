@@ -34,10 +34,6 @@ public class CommentReply {
     private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id")
-    private Post post;
-
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "comment_parent_id")
     private Comment commentParent;
 
@@ -47,7 +43,6 @@ public class CommentReply {
                    Long likes_cnt,
                    LocalDateTime commentedDate,
                    Member member,
-                   Post post,
                    Comment comment_parent) {
         this.content = content;
         this.likes_cnt = likes_cnt;
@@ -55,8 +50,6 @@ public class CommentReply {
 
         this.member = member;
         member.addCommentReply(this);
-
-        this.post = post;
 
         this.commentParent = comment_parent;
         comment_parent.addChild(this);

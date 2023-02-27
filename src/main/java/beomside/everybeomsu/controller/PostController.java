@@ -1,8 +1,6 @@
 package beomside.everybeomsu.controller;
 
-import beomside.everybeomsu.domain.Board;
-import beomside.everybeomsu.domain.Member;
-import beomside.everybeomsu.domain.Post;
+import beomside.everybeomsu.domain.*;
 import beomside.everybeomsu.dto.req.createPost.PostReqDto;
 import beomside.everybeomsu.dto.res.post.CommentPostResDto;
 import beomside.everybeomsu.dto.res.post.MemberPostResDto;
@@ -10,6 +8,7 @@ import beomside.everybeomsu.dto.res.post.PostResDto;
 import beomside.everybeomsu.service.BoardService;
 import beomside.everybeomsu.service.MemberService;
 import beomside.everybeomsu.service.PostService;
+import beomside.everybeomsu.service.ScrappedPostService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +24,7 @@ public class PostController {
     private final PostService postService;
     private final MemberService memberService;
     private final BoardService boardService;
+    private final ScrappedPostService scrappedPostService;
 
     @GetMapping("/post/{postId}")
     public PostResDto getPost(@PathVariable("postId") Long postId) {
@@ -39,7 +39,7 @@ public class PostController {
                 .postedDate(post.getPostedDate())
                 .isAnonymous(post.isAnonymous())
                 .isQuestion(post.isQuestion())
-                //나중에 리팩토링. 코드가 너무 복잡
+                //나중에 리팩토링. 코드가 너무 지저분함
                 .comments(
                         post.getComments().stream()
                                 .map(c -> CommentPostResDto.builder()
@@ -102,5 +102,23 @@ public class PostController {
         Post post = postService.getPostById(postId);
         postService.plusLikes(post);
         log.info("Success: plus like is completed successfully");
+    }
+
+    @PutMapping("/plus/p/{postId}/m/{memberId}/scraps")
+    public void plusScraps(@PathVariable(name = "postId") Long postId,
+                           @PathVariable(name = "memberId") Long memberId) {
+
+        Member member = memberService.getMemberById(memberId);
+        Post post = postService.getPostById(postId);
+
+        ScrappedPost scrappedPost = ScrappedPost.builder()
+                .member(member)
+                .post(post)
+                .build();
+
+        postService.plusScraps(post);
+        scrappedPostService.save(scrappedPost);
+
+        log.info("Success: scrappedPost is created successfully");
     }
 }

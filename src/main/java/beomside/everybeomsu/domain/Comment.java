@@ -67,6 +67,7 @@ public class Comment {
     }
 
     public void addChild(CommentReply childComment) {
+        post.plusComment();
         commentChild.add(childComment);
     }
 }

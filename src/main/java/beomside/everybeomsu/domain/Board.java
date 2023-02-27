@@ -1,6 +1,5 @@
 package beomside.everybeomsu.domain;
 
-import beomside.everybeomsu.dto.req.BoardReqDto;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
