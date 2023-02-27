@@ -30119,3 +30119,1436 @@ jakarta.persistence.EntityNotFoundException: 해당하는 포스트가 없습니다.
         comment_reply 
     where
         comment_id=?
+2023-02-27T23:22:43.048+09:00 DEBUG 9736 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    delete 
+    from
+        comment 
+    where
+        comment_id=?
+2023-02-27T23:22:43.049+09:00 DEBUG 9736 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    delete 
+    from
+        comment 
+    where
+        comment_id=?
+2023-02-27T23:22:43.049+09:00 DEBUG 9736 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    delete 
+    from
+        comment 
+    where
+        comment_id=?
+2023-02-27T23:22:43.049+09:00 DEBUG 9736 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    delete 
+    from
+        scrapped_post 
+    where
+        scrapped_post_id=?
+2023-02-27T23:22:43.051+09:00 DEBUG 9736 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    delete 
+    from
+        post 
+    where
+        post_id=?
+2023-02-27T23:46:56.695+09:00  INFO 3096 --- [restartedMain] b.everybeomsu.EverybeomsuApplication     : Starting EverybeomsuApplication using Java 17.0.5 with PID 3096 (C:\Users\TFX5075G\Documents\개발\everybeomsu\build\classes\java\main started by TFX5075G in C:\Users\TFX5075G\Documents\개발\everybeomsu)
+2023-02-27T23:46:56.699+09:00  INFO 3096 --- [restartedMain] b.everybeomsu.EverybeomsuApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-02-27T23:46:56.763+09:00  INFO 3096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-27T23:46:56.763+09:00  INFO 3096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-27T23:46:58.138+09:00  INFO 3096 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-27T23:46:58.242+09:00  INFO 3096 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 6 JPA repository interfaces.
+2023-02-27T23:46:59.179+09:00  INFO 3096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-02-27T23:46:59.192+09:00  INFO 3096 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-27T23:46:59.193+09:00  INFO 3096 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-27T23:46:59.269+09:00  INFO 3096 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-27T23:46:59.272+09:00  INFO 3096 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2508 ms
+2023-02-27T23:46:59.515+09:00  INFO 3096 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-27T23:46:59.579+09:00  INFO 3096 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-27T23:46:59.808+09:00  WARN 3096 --- [restartedMain] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-27T23:46:59.898+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(FloatTypeDescriptor) replaced previous registration(DoubleTypeDescriptor)
+2023-02-27T23:46:59.909+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@67b56baf
+2023-02-27T23:46:59.909+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@67b56baf
+2023-02-27T23:46:59.910+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@67b56baf
+2023-02-27T23:46:59.910+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@169aa9c6
+2023-02-27T23:46:59.910+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@169aa9c6
+2023-02-27T23:46:59.910+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@16e5f0ae
+2023-02-27T23:46:59.910+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@16e5f0ae
+2023-02-27T23:46:59.911+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@122d66c3
+2023-02-27T23:46:59.911+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@122d66c3
+2023-02-27T23:46:59.911+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@5e899f3a
+2023-02-27T23:46:59.911+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@5e899f3a
+2023-02-27T23:46:59.912+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@5e899f3a
+2023-02-27T23:46:59.912+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@5da54b1c
+2023-02-27T23:46:59.912+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@5da54b1c
+2023-02-27T23:46:59.912+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@5da54b1c
+2023-02-27T23:46:59.912+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@4fc76fdd
+2023-02-27T23:46:59.913+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@4fc76fdd
+2023-02-27T23:46:59.917+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.BasicTypeReference@4fc76fdd
+2023-02-27T23:46:59.917+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.BasicTypeReference@4fc76fdd
+2023-02-27T23:46:59.917+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@24ffdce8
+2023-02-27T23:46:59.918+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@39743cbc
+2023-02-27T23:46:59.918+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@39743cbc
+2023-02-27T23:46:59.918+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@4e7e7d25
+2023-02-27T23:46:59.918+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@3a334ab0
+2023-02-27T23:46:59.918+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@60f1d982
+2023-02-27T23:46:59.918+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@60f1d982
+2023-02-27T23:46:59.918+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@60f1d982
+2023-02-27T23:46:59.919+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@787898fc
+2023-02-27T23:46:59.919+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@787898fc
+2023-02-27T23:46:59.919+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@787898fc
+2023-02-27T23:46:59.920+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@45525583
+2023-02-27T23:46:59.920+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@45525583
+2023-02-27T23:46:59.920+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@45525583
+2023-02-27T23:46:59.920+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@6514e153
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@6514e153
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@6514e153
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@bc709ba
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@bc709ba
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@bc709ba
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@37c4cf46
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@37c4cf46
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@606d6a70
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@606d6a70
+2023-02-27T23:46:59.921+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@22311157
+2023-02-27T23:46:59.922+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@22311157
+2023-02-27T23:46:59.922+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@22311157
+2023-02-27T23:46:59.922+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@11885672
+2023-02-27T23:46:59.922+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@a705fa
+2023-02-27T23:46:59.922+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@a705fa
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@b12d174
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@2183d2e8
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@2183d2e8
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@2183d2e8
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@726b3b6c
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.BasicTypeReference@726b3b6c
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.BasicTypeReference@726b3b6c
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@4adb680e
+2023-02-27T23:46:59.923+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@575f8950
+2023-02-27T23:46:59.924+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@68f405c1
+2023-02-27T23:46:59.924+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@68f405c1
+2023-02-27T23:46:59.924+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@436ff3e8
+2023-02-27T23:46:59.924+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@436ff3e8
+2023-02-27T23:46:59.924+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@52656893
+2023-02-27T23:46:59.924+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@79db7e86
+2023-02-27T23:46:59.924+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@3149b671
+2023-02-27T23:46:59.924+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@d05e303
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@745d33c0
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@56505c83
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@2a569206
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@2a569206
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@86961b4
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@86961b4
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@1537804a
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@1537804a
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@4157722b
+2023-02-27T23:46:59.925+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@4157722b
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@5f8f0ea5
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@5f8f0ea5
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@1c28b021
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@35b4563e
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@4f08ac89
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@4f08ac89
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@685569eb
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@685569eb
+2023-02-27T23:46:59.926+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@31a57578
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@26b7d0d4
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@2c515c6f
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@2c515c6f
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@6f88623f
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@6f88623f
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@759cd403
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@759cd403
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@759cd403
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@6d359b14
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@6d359b14
+2023-02-27T23:46:59.927+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@6d359b14
+2023-02-27T23:46:59.928+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@4ba110f9
+2023-02-27T23:46:59.928+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@67140a28
+2023-02-27T23:46:59.928+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@74bbe605
+2023-02-27T23:46:59.928+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@74bbe605
+2023-02-27T23:46:59.928+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@35173ebd
+2023-02-27T23:46:59.928+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@35173ebd
+2023-02-27T23:46:59.928+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@35173ebd
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@76f2c63e
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@31f0d782
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@1ad08477
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@1ad08477
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@16beb346
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@16beb346
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@16beb346
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@761d5499
+2023-02-27T23:46:59.929+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@761d5499
+2023-02-27T23:46:59.930+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@4166c11f
+2023-02-27T23:46:59.930+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@4166c11f
+2023-02-27T23:46:59.930+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@5f0b1678
+2023-02-27T23:46:59.930+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@5f0b1678
+2023-02-27T23:46:59.930+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@3c4cba5c
+2023-02-27T23:46:59.930+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@3c4cba5c
+2023-02-27T23:46:59.930+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@20e998d0
+2023-02-27T23:46:59.931+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@20e998d0
+2023-02-27T23:46:59.931+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@5770cbeb
+2023-02-27T23:46:59.942+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1ebe32
+2023-02-27T23:46:59.942+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1ebe32
+2023-02-27T23:46:59.944+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@4baa1724
+2023-02-27T23:46:59.944+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@4baa1724
+2023-02-27T23:46:59.945+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@7470dacf
+2023-02-27T23:46:59.946+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@2b573879
+2023-02-27T23:46:59.946+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@4f16b559
+2023-02-27T23:46:59.946+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@33c30e51
+2023-02-27T23:46:59.946+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@41171c44
+2023-02-27T23:46:59.946+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@539160ef
+2023-02-27T23:46:59.946+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@2957bbb9
+2023-02-27T23:46:59.947+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@24d9944
+2023-02-27T23:46:59.947+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@7bc15075
+2023-02-27T23:46:59.984+09:00  INFO 3096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-27T23:47:00.585+09:00  INFO 3096 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a180d47
+2023-02-27T23:47:00.587+09:00  INFO 3096 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-27T23:47:00.653+09:00  INFO 3096 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-02-27T23:47:00.689+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5a7b5361) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7a458584)
+2023-02-27T23:47:00.690+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@592f446b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@239898d0)
+2023-02-27T23:47:00.690+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@23f83799) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7547ffc7)
+2023-02-27T23:47:00.690+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5668f118) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3151ad1d)
+2023-02-27T23:47:00.690+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@53f70051) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@1984742f)
+2023-02-27T23:47:00.690+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@8f5b636) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@34f0cb70)
+2023-02-27T23:47:00.691+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5feeb037) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@657182e9)
+2023-02-27T23:47:00.691+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4090cc77) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7289345e)
+2023-02-27T23:47:00.691+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@584c5d30) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@31c3ea1a)
+2023-02-27T23:47:00.694+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2023-02-27T23:47:00.694+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2023-02-27T23:47:00.696+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2023-02-27T23:47:00.700+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2023-02-27T23:47:00.701+09:00 DEBUG 3096 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2023-02-27T23:47:00.706+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@543af3dc
+2023-02-27T23:47:00.707+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Type registration key [null] overrode previous entry : `org.hibernate.type.NullType@7470dacf`
+2023-02-27T23:47:00.716+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.OffsetDateTimeType -> basicType@1(java.time.OffsetDateTime,93)
+2023-02-27T23:47:00.716+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> basicType@1(java.time.OffsetDateTime,93)
+2023-02-27T23:47:00.716+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> basicType@1(java.time.OffsetDateTime,93)
+2023-02-27T23:47:00.716+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.ZonedDateTimeType -> basicType@2(java.time.ZonedDateTime,93)
+2023-02-27T23:47:00.717+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> basicType@2(java.time.ZonedDateTime,93)
+2023-02-27T23:47:00.717+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> basicType@2(java.time.ZonedDateTime,93)
+2023-02-27T23:47:00.722+09:00 DEBUG 3096 --- [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3763e5e5] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@2f5d6eaf]
+2023-02-27T23:47:01.390+09:00 DEBUG 3096 --- [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3763e5e5] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@5104b665]
+2023-02-27T23:47:02.391+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table comment 
+       drop 
+       foreign key FKmrrrpi513ssu63i2783jyiv9m
+2023-02-27T23:47:02.432+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table comment 
+       drop 
+       foreign key FKs1slvnkuemjsq2kj4h3vhx7i1
+2023-02-27T23:47:02.454+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table comment_reply 
+       drop 
+       foreign key FK9oe5yjir7h3necc0jltu587h
+2023-02-27T23:47:02.464+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table comment_reply 
+       drop 
+       foreign key FKgwbmyd1kgu3uke8dud74vuk7k
+2023-02-27T23:47:02.474+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table post 
+       drop 
+       foreign key FK2t7katxxymxif93a9osshl0ns
+2023-02-27T23:47:02.488+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table post 
+       drop 
+       foreign key FK83s99f4kx8oiqm3ro0sasmpww
+2023-02-27T23:47:02.498+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table scrapped_post 
+       drop 
+       foreign key FKqt256q6l61lpum1tvov66fgni
+2023-02-27T23:47:02.508+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table scrapped_post 
+       drop 
+       foreign key FKaumdh9qbr2sh7pml26loeutsw
+2023-02-27T23:47:02.518+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists board
+2023-02-27T23:47:02.526+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists board_seq
+2023-02-27T23:47:02.531+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists comment
+2023-02-27T23:47:02.539+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists comment_reply_seq
+2023-02-27T23:47:02.543+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists comment_seq
+2023-02-27T23:47:02.549+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists comment_reply
+2023-02-27T23:47:02.557+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists member
+2023-02-27T23:47:02.564+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists member_seq
+2023-02-27T23:47:02.571+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists post
+2023-02-27T23:47:02.579+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists post_seq
+2023-02-27T23:47:02.585+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists scrapped_post_seq
+2023-02-27T23:47:02.591+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    drop table if exists scrapped_post
+2023-02-27T23:47:02.599+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table board (
+       board_id bigint not null,
+        name varchar(255),
+        primary key (board_id)
+    ) engine=InnoDB
+2023-02-27T23:47:02.612+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table board_seq (
+       next_val bigint
+    ) engine=InnoDB
+2023-02-27T23:47:02.623+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    insert into board_seq values ( 1 )
+2023-02-27T23:47:02.625+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table comment (
+       comment_id bigint not null,
+        commented_date datetime(6),
+        content varchar(255),
+        likes_cnt bigint,
+        member_id bigint,
+        post_id bigint,
+        primary key (comment_id)
+    ) engine=InnoDB
+2023-02-27T23:47:02.642+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table comment_reply_seq (
+       next_val bigint
+    ) engine=InnoDB
+2023-02-27T23:47:02.662+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    insert into comment_reply_seq values ( 1 )
+2023-02-27T23:47:02.668+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table comment_seq (
+       next_val bigint
+    ) engine=InnoDB
+2023-02-27T23:47:02.689+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    insert into comment_seq values ( 1 )
+2023-02-27T23:47:02.695+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table comment_reply (
+       comment_id bigint not null,
+        commented_date datetime(6),
+        content varchar(255),
+        likes_cnt bigint,
+        comment_parent_id bigint,
+        member_id bigint,
+        primary key (comment_id)
+    ) engine=InnoDB
+2023-02-27T23:47:02.715+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table member (
+       member_id bigint not null,
+        login_id varchar(255),
+        login_pw varchar(255),
+        name varchar(255),
+        nickname varchar(255),
+        primary key (member_id)
+    ) engine=InnoDB
+2023-02-27T23:47:02.737+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table member_seq (
+       next_val bigint
+    ) engine=InnoDB
+2023-02-27T23:47:02.750+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    insert into member_seq values ( 1 )
+2023-02-27T23:47:02.755+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table post (
+       post_id bigint not null,
+        comments_cnt bigint,
+        content varchar(255),
+        is_anonymous bit not null,
+        is_question bit not null,
+        likes_cnt bigint,
+        photos_cnt bigint,
+        posted_date datetime(6),
+        scraps_cnt bigint,
+        title varchar(255),
+        board_id bigint,
+        member_id bigint,
+        primary key (post_id)
+    ) engine=InnoDB
+2023-02-27T23:47:02.771+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table post_seq (
+       next_val bigint
+    ) engine=InnoDB
+2023-02-27T23:47:02.783+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    insert into post_seq values ( 1 )
+2023-02-27T23:47:02.788+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table scrapped_post_seq (
+       next_val bigint
+    ) engine=InnoDB
+2023-02-27T23:47:02.802+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    insert into scrapped_post_seq values ( 1 )
+2023-02-27T23:47:02.806+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    create table scrapped_post (
+       scrapped_post_id bigint not null,
+        member_id bigint,
+        post_id bigint,
+        primary key (scrapped_post_id)
+    ) engine=InnoDB
+2023-02-27T23:47:02.821+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table comment 
+       add constraint FKmrrrpi513ssu63i2783jyiv9m 
+       foreign key (member_id) 
+       references member (member_id)
+2023-02-27T23:47:02.857+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table comment 
+       add constraint FKs1slvnkuemjsq2kj4h3vhx7i1 
+       foreign key (post_id) 
+       references post (post_id)
+2023-02-27T23:47:02.898+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table comment_reply 
+       add constraint FK9oe5yjir7h3necc0jltu587h 
+       foreign key (comment_parent_id) 
+       references comment (comment_id)
+2023-02-27T23:47:02.940+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table comment_reply 
+       add constraint FKgwbmyd1kgu3uke8dud74vuk7k 
+       foreign key (member_id) 
+       references member (member_id)
+2023-02-27T23:47:03.026+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table post 
+       add constraint FK2t7katxxymxif93a9osshl0ns 
+       foreign key (board_id) 
+       references board (board_id)
+2023-02-27T23:47:03.078+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table post 
+       add constraint FK83s99f4kx8oiqm3ro0sasmpww 
+       foreign key (member_id) 
+       references member (member_id)
+2023-02-27T23:47:03.124+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table scrapped_post 
+       add constraint FKqt256q6l61lpum1tvov66fgni 
+       foreign key (member_id) 
+       references member (member_id)
+2023-02-27T23:47:03.189+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    
+    alter table scrapped_post 
+       add constraint FKaumdh9qbr2sh7pml26loeutsw 
+       foreign key (post_id) 
+       references post (post_id)
+2023-02-27T23:47:03.258+09:00  INFO 3096 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-27T23:47:03.271+09:00 TRACE 3096 --- [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@5104b665] for TypeConfiguration
+2023-02-27T23:47:03.273+09:00  INFO 3096 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-27T23:47:04.042+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        member_seq for update
+2023-02-27T23:47:04.055+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        member_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:04.096+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        post_seq for update
+2023-02-27T23:47:04.100+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:04.108+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        post_seq for update
+2023-02-27T23:47:04.111+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:04.117+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        board_seq for update
+2023-02-27T23:47:04.118+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        board_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:04.121+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        board_seq for update
+2023-02-27T23:47:04.122+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        board_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:04.140+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (login_id, login_pw, name, nickname, member_id) 
+    values
+        (?, ?, ?, ?, ?)
+2023-02-27T23:47:04.146+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (board_id, comments_cnt, content, is_anonymous, is_question, likes_cnt, member_id, photos_cnt, posted_date, scraps_cnt, title, post_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:04.155+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (board_id, comments_cnt, content, is_anonymous, is_question, likes_cnt, member_id, photos_cnt, posted_date, scraps_cnt, title, post_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:04.160+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (board_id, comments_cnt, content, is_anonymous, is_question, likes_cnt, member_id, photos_cnt, posted_date, scraps_cnt, title, post_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:04.163+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (board_id, comments_cnt, content, is_anonymous, is_question, likes_cnt, member_id, photos_cnt, posted_date, scraps_cnt, title, post_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:04.167+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (board_id, comments_cnt, content, is_anonymous, is_question, likes_cnt, member_id, photos_cnt, posted_date, scraps_cnt, title, post_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:04.170+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (board_id, comments_cnt, content, is_anonymous, is_question, likes_cnt, member_id, photos_cnt, posted_date, scraps_cnt, title, post_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:04.171+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (board_id, comments_cnt, content, is_anonymous, is_question, likes_cnt, member_id, photos_cnt, posted_date, scraps_cnt, title, post_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:04.173+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (board_id, comments_cnt, content, is_anonymous, is_question, likes_cnt, member_id, photos_cnt, posted_date, scraps_cnt, title, post_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:04.175+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        board
+        (name, board_id) 
+    values
+        (?, ?)
+2023-02-27T23:47:04.176+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        board
+        (name, board_id) 
+    values
+        (?, ?)
+2023-02-27T23:47:04.178+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:04.181+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:04.185+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:04.188+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:04.190+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:04.193+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:04.195+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:04.196+09:00 DEBUG 3096 --- [restartedMain] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:04.264+09:00  WARN 3096 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-27T23:47:04.685+09:00  INFO 3096 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-27T23:47:04.725+09:00  INFO 3096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-27T23:47:04.737+09:00  INFO 3096 --- [restartedMain] b.everybeomsu.EverybeomsuApplication     : Started EverybeomsuApplication in 8.791 seconds (process running for 9.314)
+2023-02-27T23:47:08.189+09:00  INFO 3096 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-27T23:47:08.191+09:00  INFO 3096 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-27T23:47:08.194+09:00  INFO 3096 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-02-27T23:47:08.322+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:47:08.424+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        b1_0.board_id,
+        b1_0.name 
+    from
+        board b1_0
+2023-02-27T23:47:08.780+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    join
+        board b1_0 
+            on b1_0.board_id=p1_0.board_id 
+            and b1_0.name=? 
+    order by
+        p1_0.posted_date desc limit ?,
+        ?
+2023-02-27T23:47:08.786+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    join
+        board b1_0 
+            on b1_0.board_id=p1_0.board_id 
+            and b1_0.name=? 
+    order by
+        p1_0.posted_date desc limit ?,
+        ?
+2023-02-27T23:47:08.799+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        b1_0.board_id 
+    from
+        board b1_0
+2023-02-27T23:47:13.597+09:00 DEBUG 3096 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    join
+        board b1_0 
+            on b1_0.board_id=p1_0.board_id 
+            and b1_0.name=? 
+    order by
+        p1_0.posted_date desc limit ?,
+        ?
+2023-02-27T23:47:25.809+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:47:25.815+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.post_id=?
+2023-02-27T23:47:25.824+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        comment_seq for update
+2023-02-27T23:47:25.826+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    update
+        comment_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:25.843+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        comment
+        (commented_date, content, likes_cnt, member_id, post_id, comment_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:25.848+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:25.853+09:00  INFO 3096 --- [http-nio-8080-exec-4] b.e.controller.CommentController         : Success: comment is created successfully
+2023-02-27T23:47:28.531+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:47:28.536+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.post_id=?
+2023-02-27T23:47:28.541+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        comment_seq for update
+2023-02-27T23:47:28.543+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    update
+        comment_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:28.558+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    insert 
+    into
+        comment
+        (commented_date, content, likes_cnt, member_id, post_id, comment_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:28.562+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:28.565+09:00  INFO 3096 --- [http-nio-8080-exec-5] b.e.controller.CommentController         : Success: comment is created successfully
+2023-02-27T23:47:30.992+09:00 DEBUG 3096 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:47:30.995+09:00 DEBUG 3096 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.post_id=?
+2023-02-27T23:47:31.001+09:00 DEBUG 3096 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        comment
+        (commented_date, content, likes_cnt, member_id, post_id, comment_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:31.003+09:00 DEBUG 3096 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:31.019+09:00  INFO 3096 --- [http-nio-8080-exec-6] b.e.controller.CommentController         : Success: comment is created successfully
+2023-02-27T23:47:38.242+09:00 DEBUG 3096 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:47:38.254+09:00 DEBUG 3096 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id,
+        c1_0.post_id 
+    from
+        comment c1_0 
+    where
+        c1_0.comment_id=?
+2023-02-27T23:47:38.257+09:00 DEBUG 3096 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.post_id=?
+2023-02-27T23:47:38.265+09:00 DEBUG 3096 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        comment_reply_seq for update
+2023-02-27T23:47:38.266+09:00 DEBUG 3096 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    update
+        comment_reply_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:38.287+09:00 DEBUG 3096 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        comment_reply
+        (comment_parent_id, commented_date, content, likes_cnt, member_id, comment_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:38.296+09:00 DEBUG 3096 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:38.303+09:00  INFO 3096 --- [http-nio-8080-exec-7] b.e.controller.CommentController         : Success: comment reply is created successfully
+2023-02-27T23:47:43.483+09:00 DEBUG 3096 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:47:43.487+09:00 DEBUG 3096 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id,
+        c1_0.post_id 
+    from
+        comment c1_0 
+    where
+        c1_0.comment_id=?
+2023-02-27T23:47:43.495+09:00 DEBUG 3096 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.post_id=?
+2023-02-27T23:47:43.500+09:00 DEBUG 3096 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        comment_reply_seq for update
+2023-02-27T23:47:43.501+09:00 DEBUG 3096 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    update
+        comment_reply_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2023-02-27T23:47:43.518+09:00 DEBUG 3096 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        comment_reply
+        (comment_parent_id, commented_date, content, likes_cnt, member_id, comment_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2023-02-27T23:47:43.522+09:00 DEBUG 3096 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    update
+        post 
+    set
+        board_id=?,
+        comments_cnt=?,
+        content=?,
+        is_anonymous=?,
+        is_question=?,
+        likes_cnt=?,
+        member_id=?,
+        photos_cnt=?,
+        posted_date=?,
+        scraps_cnt=?,
+        title=? 
+    where
+        post_id=?
+2023-02-27T23:47:43.531+09:00  INFO 3096 --- [http-nio-8080-exec-8] b.e.controller.CommentController         : Success: comment reply is created successfully
+2023-02-27T23:47:48.065+09:00 DEBUG 3096 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.post_id=?
+2023-02-27T23:47:48.072+09:00 DEBUG 3096 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:47:48.081+09:00 DEBUG 3096 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.post_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment c1_0 
+    where
+        c1_0.post_id=?
+2023-02-27T23:47:48.093+09:00 DEBUG 3096 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:47:48.097+09:00 DEBUG 3096 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:47:48.098+09:00 DEBUG 3096 --- [http-nio-8080-exec-9] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:48:51.106+09:00 DEBUG 3096 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id,
+        c1_0.post_id 
+    from
+        comment c1_0 
+    where
+        c1_0.comment_id=?
+2023-02-27T23:48:51.113+09:00 DEBUG 3096 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:48:51.121+09:00 DEBUG 3096 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : 
+    delete 
+    from
+        comment 
+    where
+        comment_id=?
+2023-02-27T23:48:51.136+09:00  INFO 3096 --- [http-nio-8080-exec-2] b.e.controller.CommentController         : Success: comment is deleted successfully
+2023-02-27T23:48:55.949+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.post_id=?
+2023-02-27T23:48:55.952+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:48:55.955+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.post_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment c1_0 
+    where
+        c1_0.post_id=?
+2023-02-27T23:48:55.959+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:48:55.960+09:00 DEBUG 3096 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:49:07.388+09:00 DEBUG 3096 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id,
+        c1_0.post_id 
+    from
+        comment c1_0 
+    where
+        c1_0.comment_id=?
+2023-02-27T23:49:07.394+09:00 DEBUG 3096 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:49:07.402+09:00 DEBUG 3096 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    update
+        comment 
+    set
+        commented_date=?,
+        content=?,
+        likes_cnt=?,
+        member_id=?,
+        post_id=? 
+    where
+        comment_id=?
+2023-02-27T23:49:07.407+09:00  INFO 3096 --- [http-nio-8080-exec-3] b.e.controller.CommentController         : Success: comment is deleted successfully
+2023-02-27T23:49:09.926+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.board_id,
+        p1_0.comments_cnt,
+        p1_0.content,
+        p1_0.is_anonymous,
+        p1_0.is_question,
+        p1_0.likes_cnt,
+        p1_0.member_id,
+        p1_0.photos_cnt,
+        p1_0.posted_date,
+        p1_0.scraps_cnt,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.post_id=?
+2023-02-27T23:49:09.931+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        m1_0.member_id,
+        m1_0.login_id,
+        m1_0.login_pw,
+        m1_0.name,
+        m1_0.nickname 
+    from
+        member m1_0 
+    where
+        m1_0.member_id=?
+2023-02-27T23:49:09.936+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.post_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment c1_0 
+    where
+        c1_0.post_id=?
+2023-02-27T23:49:09.939+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:49:09.945+09:00 DEBUG 3096 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?

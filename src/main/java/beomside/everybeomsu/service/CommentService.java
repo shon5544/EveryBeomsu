@@ -28,6 +28,16 @@ public class CommentService {
         comment.minusLike();
     }
 
+    @Transactional
+    public void deleteComment(Long commentId) {
+        commentRepository.deleteById(commentId);
+    }
+
+    @Transactional
+    public void deleteCommentByChanging(Comment comment) {
+        comment.deleteThis();
+    }
+
     public Comment getCommentById(Long comment_id) {
         return commentRepository.findById(comment_id)
                 .orElseGet(() -> null);

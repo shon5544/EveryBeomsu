@@ -77,4 +77,17 @@ public class CommentController {
         commentService.cancelCommentLikes(comment);
         log.info("Success: cancel likes for comment is completed successfully");
     }
+
+    @DeleteMapping("/delete/comment/{commentId}")
+    public void deleteComment(@PathVariable(name = "commentId") Long commentId) {
+        Comment comment = commentService.getCommentById(commentId);
+
+        if(comment.getCommentChild().isEmpty()) {
+            commentService.deleteComment(commentId);
+        } else {
+            commentService.deleteCommentByChanging(comment);
+        }
+
+        log.info("Success: comment is deleted successfully");
+    }
 }
