@@ -6,9 +6,7 @@ import beomside.everybeomsu.service.MemberService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -28,5 +26,11 @@ public class MemberController {
 
         memberService.register(member);
         log.info("Success: registration is completed");
+    }
+
+    @DeleteMapping("/delete/member/{memberId}")
+    public void deleteMember(@PathVariable(name = "memberId") Long memberId) {
+        memberService.deleteMember(memberId);
+        log.info("Success: member is deleted successfully");
     }
 }

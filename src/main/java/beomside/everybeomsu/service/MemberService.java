@@ -22,6 +22,11 @@ public class MemberService {
         memberRepository.save(member);
     }
 
+    @Transactional
+    public void deleteMember(Long memberId) {
+        memberRepository.deleteById(memberId);
+    }
+
     //회원 로그인
     public void login(Member member) {
         validationLoginMember(member);
