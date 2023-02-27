@@ -98,10 +98,17 @@ public class PostController {
     }
 
     @PutMapping("/plus/p/{postId}/likes")
-    public void plusLikes(@PathVariable(name = "postId") Long postId) {
+    public void plusPostLikes(@PathVariable(name = "postId") Long postId) {
         Post post = postService.getPostById(postId);
         postService.plusLikes(post);
         log.info("Success: plus like is completed successfully");
+    }
+
+    @PutMapping("/cancel/p/{postId}/likes")
+    public void cancelPostLikes(@PathVariable(name = "postId") Long postId) {
+        Post post = postService.getPostById(postId);
+        postService.cancelLikes(post);
+        log.info("Success: minus like is completed successfully");
     }
 
     @PutMapping("/plus/p/{postId}/m/{memberId}/scraps")

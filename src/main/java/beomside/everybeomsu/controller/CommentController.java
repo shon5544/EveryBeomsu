@@ -12,9 +12,7 @@ import beomside.everybeomsu.service.MemberService;
 import beomside.everybeomsu.service.PostService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 
@@ -64,5 +62,17 @@ public class CommentController {
 
         commentReplyService.createCommentReply(commentReply);
         log.info("Success: comment reply is created successfully");
+    }
+
+    @PutMapping("/plus/c/{commentId}/likes")
+    public void plusCommentLikes(@PathVariable(name = "commentId") Long commentId) {
+        Comment comment = commentService.getCommentById(commentId);
+        commentService.plusCommentLikes(comment);
+    }
+
+    @PutMapping("/cancel/c/{commentId}/likes")
+    public void cancelCommentLikes(@PathVariable(name = "commentId") Long commentId) {
+        Comment comment = commentService.getCommentById(commentId);
+        commentService.cancelCommentLikes(comment);
     }
 }

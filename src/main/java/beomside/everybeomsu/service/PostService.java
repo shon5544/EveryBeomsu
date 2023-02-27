@@ -33,6 +33,11 @@ public class PostService {
     }
 
     @Transactional
+    public void cancelLikes(Post post) {
+        post.minusLike();
+    }
+
+    @Transactional
     public void plusScraps(Post post) {
         post.plusScrap();
     }

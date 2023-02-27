@@ -18,6 +18,16 @@ public class CommentService {
         commentRepository.save(comment);
     }
 
+    @Transactional
+    public void plusCommentLikes(Comment comment) {
+        comment.plusLike();
+    }
+
+    @Transactional
+    public void cancelCommentLikes(Comment comment) {
+        comment.minusLike();
+    }
+
     public Comment getCommentById(Long comment_id) {
         return commentRepository.findById(comment_id)
                 .orElseGet(() -> null);
