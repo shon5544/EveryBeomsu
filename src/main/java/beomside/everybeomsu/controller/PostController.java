@@ -96,4 +96,11 @@ public class PostController {
 
         log.info("Success: the post is created successfully");
     }
+
+    @PutMapping("/plus/p/{postId}/likes")
+    public void plusLikes(@PathVariable(name = "postId") Long postId) {
+        Post post = postService.getPostById(postId);
+        postService.plusLikes(post);
+        log.info("Success: plus like is completed successfully");
+    }
 }
