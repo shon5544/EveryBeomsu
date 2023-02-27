@@ -36,7 +36,7 @@ public class Comment {
     @JoinColumn(name = "post_id")
     private Post post;
 
-    @OneToMany(mappedBy = "commentParent")
+    @OneToMany(mappedBy = "commentParent", cascade = CascadeType.ALL)
     private final List<CommentReply> commentChild = new ArrayList<>();
 
     //생성자

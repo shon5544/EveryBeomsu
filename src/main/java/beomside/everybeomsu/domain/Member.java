@@ -40,6 +40,9 @@ public class Member {
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private final List<CommentReply> commentReplies = new ArrayList<>();
 
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
+    private final List<ScrappedPost> scrappedPosts = new ArrayList<>();
+
     //생성자
     @Builder
     public Member(String name,String nickname, String loginId, String loginPw) {

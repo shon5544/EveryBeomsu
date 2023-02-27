@@ -28,6 +28,11 @@ public class PostService {
     }
 
     @Transactional
+    public void deletePost(Long postId) {
+        postRepository.deleteById(postId);
+    }
+
+    @Transactional
     public void plusLikes(Post post) {
         post.plusLike();
     }

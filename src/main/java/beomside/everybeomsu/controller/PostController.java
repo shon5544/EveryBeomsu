@@ -109,4 +109,10 @@ public class PostController {
         postService.cancelLikes(post);
         log.info("Success: minus like is completed successfully");
     }
+
+    @DeleteMapping("/delete/post/{postId}")
+    public void deletePost(@PathVariable(name = "postId") Long postId) {
+        postService.deletePost(postId);
+        log.info("Success: post is deleted successfully");
+    }
 }

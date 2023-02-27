@@ -52,6 +52,9 @@ public class Post {
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     private final List<Comment> comments = new ArrayList<>();
 
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
+    private final List<ScrappedPost> scrappedPosts = new ArrayList<>();
+
     //생성자
     @Builder
     public Post(String title,
