@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-public class RegisterLoginController {
+public class MemberController {
 
     private final MemberService memberService;
 

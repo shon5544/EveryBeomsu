@@ -31552,3 +31552,34 @@ jakarta.persistence.EntityNotFoundException: 해당하는 포스트가 없습니다.
         comment_reply c1_0 
     where
         c1_0.comment_parent_id=?
+2023-02-27T23:49:19.842+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id,
+        c1_0.post_id 
+    from
+        comment c1_0 
+    where
+        c1_0.comment_id=?
+2023-02-27T23:49:19.845+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.comment_parent_id,
+        c1_0.comment_id,
+        c1_0.commented_date,
+        c1_0.content,
+        c1_0.likes_cnt,
+        c1_0.member_id 
+    from
+        comment_reply c1_0 
+    where
+        c1_0.comment_parent_id=?
+2023-02-27T23:49:19.846+09:00 DEBUG 3096 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    delete 
+    from
+        comment 
+    where
+        comment_id=?
+2023-02-27T23:49:19.860+09:00  INFO 3096 --- [http-nio-8080-exec-5] b.e.controller.CommentController         : Success: comment is deleted successfully
