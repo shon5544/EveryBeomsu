@@ -28,6 +28,12 @@ public class ScrappedPostService {
         scrappedPostRepository.save(scrappedPost);
     }
 
+    @Transactional
+    public void cancelScrap(ScrappedPost scrappedPost) {
+        scrappedPost.getPost().minusScrap();
+        scrappedPostRepository.deleteById(scrappedPost.getScrappedPostId());
+    }
+
     public ScrappedPost getScrappedPostById(Long id) {
         return scrappedPostRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("해당하는 프스트가 없습니다."));

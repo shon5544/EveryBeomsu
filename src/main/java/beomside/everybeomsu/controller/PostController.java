@@ -24,7 +24,6 @@ public class PostController {
     private final PostService postService;
     private final MemberService memberService;
     private final BoardService boardService;
-    private final ScrappedPostService scrappedPostService;
 
     @GetMapping("/post/{postId}")
     public PostResDto getPost(@PathVariable("postId") Long postId) {
@@ -109,23 +108,5 @@ public class PostController {
         Post post = postService.getPostById(postId);
         postService.cancelLikes(post);
         log.info("Success: minus like is completed successfully");
-    }
-
-    @PutMapping("/plus/p/{postId}/m/{memberId}/scraps")
-    public void plusScraps(@PathVariable(name = "postId") Long postId,
-                           @PathVariable(name = "memberId") Long memberId) {
-
-        Member member = memberService.getMemberById(memberId);
-        Post post = postService.getPostById(postId);
-
-        ScrappedPost scrappedPost = ScrappedPost.builder()
-                .member(member)
-                .post(post)
-                .build();
-
-        postService.plusScraps(post);
-        scrappedPostService.save(scrappedPost);
-
-        log.info("Success: scrappedPost is created successfully");
     }
 }
