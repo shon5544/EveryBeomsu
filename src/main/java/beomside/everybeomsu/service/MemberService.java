@@ -4,6 +4,9 @@ import beomside.everybeomsu.domain.Member;
 import beomside.everybeomsu.repository.MemberRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,8 +15,17 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
-public class MemberService {
+public class MemberService implements UserDetailsService {
     private final MemberRepository memberRepository;
+
+    @Override
+    public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
+        Member member = memberRepository.findByLoginId(userId);
+
+        if(member == null) throw new UsernameNotFoundException("Not Found Account");
+
+        return member;
+    }
 
     //회원 가입
     @Transactional
